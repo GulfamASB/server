@@ -18,7 +18,7 @@ export default function AddTopic() {
     }
 
     try {
-      const res = await fetch("https://main--glistening-crostata-c518c7.netlify.app/api/topics", {
+      const res = await fetch("https://gsserver.netlify.app/api/topics", {
         method: "POST",
         headers: {
           "Content-type": "application/json",

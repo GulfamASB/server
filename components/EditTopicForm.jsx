@@ -13,7 +13,7 @@ export default function EditTopicForm({ id, title, description }) {
     e.preventDefault();
 
     try {
-      const res = await fetch(`https://main--glistening-crostata-c518c7.netlify.app/api/topics/${id}`, {
+      const res = await fetch(`https://gsserver.netlify.app/api/topics/${id}`, {
         method: "PUT",
         headers: {
           "Content-type": "application/json",
