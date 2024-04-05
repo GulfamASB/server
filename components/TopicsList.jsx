@@ -1,10 +1,11 @@
 import Link from "next/link";
 import RemoveBtn from "./RemoveBtn";
 import { HiPencilAlt } from "react-icons/hi";
+import baseUrl from "@/libs/baseUrl";
 
 const getTopics = async () => {
   try {
-    const res = await fetch("https://gsserver.netlify.app/api/topics", {
+    const res = await fetch(`${baseUrl}/api/topics`, {
       cache: "no-store",
     });
 
@@ -26,10 +27,10 @@ export default async function TopicsList() {
       {topics && topics.map((t) => (
         <div
           key={t._id}
-          className="p-4 border border-slate-300 my-3 flex justify-between gap-5 items-start"
+          className=" p-4 border border-slate-300 my-3 flex justify-between gap-5 items-start"
         >
-          <div>
-            <h2 className="font-bold text-2xl">{t.title}</h2>
+          <div className="truncate ...">
+            <h2 className=" font-bold text-2xl">{t.title}</h2>
             <div>{t.description}</div>
           </div>
 

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import baseUrl from '@/libs/baseUrl';
 
 export default function EditTopicForm({ id, title, description }) {
   const [newTitle, setNewTitle] = useState(title);
@@ -13,7 +14,7 @@ export default function EditTopicForm({ id, title, description }) {
     e.preventDefault();
 
     try {
-      const res = await fetch(`https://gsserver.netlify.app/api/topics/${id}`, {
+      const res = await fetch(`${baseUrl}/api/topics/${id}`, {
         method: "PUT",
         headers: {
           "Content-type": "application/json",

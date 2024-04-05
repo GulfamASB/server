@@ -1,8 +1,9 @@
 import EditTopicForm from "@/components/EditTopicForm";
+import baseUrl from "@/libs/baseUrl";
 
 const getTopicById = async (id) => {
   try {
-    const res = await fetch(`https://gsserver.netlify.app/api/topics/${id}`, {
+    const res = await fetch(`${baseUrl}/api/topics/${id}`, {
       cache: "no-store",
     });
 

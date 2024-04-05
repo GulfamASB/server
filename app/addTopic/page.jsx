@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import baseUrl from '@/libs/baseUrl';
 
 export default function AddTopic() {
   const [title, setTitle] = useState("");
@@ -18,7 +19,7 @@ export default function AddTopic() {
     }
 
     try {
-      const res = await fetch("https://gsserver.netlify.app/api/topics", {
+      const res = await fetch(`${baseUrl}/api/topics`, {
         method: "POST",
         headers: {
           "Content-type": "application/json",
@@ -27,7 +28,7 @@ export default function AddTopic() {
       });
 
       if (res.ok) {
-        router.refresh();
+          router.refresh();
         router.push("/");
       } else {
         throw new Error("Failed to create a topic");

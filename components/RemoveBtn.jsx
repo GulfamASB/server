@@ -2,6 +2,7 @@
 
 import { HiOutlineTrash } from "react-icons/hi";
 import { useRouter } from "next/navigation";
+import baseUrl from "@/libs/baseUrl";
 
 export default function RemoveBtn({ id }) {
   const router = useRouter();
@@ -9,7 +10,7 @@ export default function RemoveBtn({ id }) {
     const confirmed = confirm("Are you sure?");
 
     if (confirmed) {
-      const res = await fetch(`https://gsserver.netlify.app/api/topics?id=${id}`, {
+      const res = await fetch(`${baseUrl}/api/topics?id=${id}`, {
         method: "DELETE",
       });
 
