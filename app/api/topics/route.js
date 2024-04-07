@@ -3,9 +3,6 @@ import Topic from "@/models/topic";
 import { NextResponse } from "next/server";
 
 export async function POST(request) {
-   // Set appropriate CORS headers
-   res.setHeader('Access-Control-Allow-Origin', 'https://gsserver.netlify.app/api/topics');
-   res.setHeader('Access-Control-Allow-Methods', 'POST');
   const { title, description } = await request.json();
   await connectMongoDB();
   await Topic.create({ title, description });
