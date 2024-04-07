@@ -1,19 +1,4 @@
-// next.config.js
+/** @type {import('next').NextConfig} */
+const nextConfig = {}
 
-module.exports = {
-    async headers() {
-      return [
-        {
-          // Set Referrer-Policy header to strict-origin-when-cross-origin
-          source: 'https://gsserver.netlify.app',
-          headers: [
-            {
-              key: 'Referrer-Policy',
-              value: 'strict-origin-when-cross-origin',
-            },
-          ],
-        },
-      ];
-    },
-  };
-  
+module.exports = nextConfig
