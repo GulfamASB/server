@@ -1,8 +1,6 @@
-"use client";
+import React from 'react'
+import AddTopic from '@/components/Addtopic'
 
-import { useState } from "react";
-import { useRouter } from "next/navigation";
-import baseUrl from '@/libs/baseUrl';
 
 export const metadata = {
   manifest:'manifest.webmanifest',
@@ -55,7 +53,7 @@ export const metadata = {
     description: ' Gulfam saifi || gulfaam saifi , gscoder, Discover  unequaled  design mastery at Gulfam saifi || gulfaam saifi – where invention meets complication. Elevate your space with bespoke innards that  review luxury and reflect your unique style. aplusstudio noida',
   
     images: [{
-      url: '/boy.png',
+      url: '/gulfam.jpeg',
       width: 400,
       height: 300,
     }]
@@ -65,64 +63,13 @@ export const metadata = {
 
 }
 
-export default function AddTopic() {
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
 
-  const router = useRouter();
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    if (!title || !description) {
-      alert("Title and description are required.");
-      return;
-    }
-
-    try {
-      const res = await fetch(`${baseUrl}/api/topics`, {
-        method: "POST",
-        headers: {
-          "Content-type": "application/json",
-        },
-        body: JSON.stringify({ title, description }),
-      });
-
-      if (res.ok) {
-          router.refresh();
-        router.push("/");
-      } else {
-        throw new Error("Failed to create a topic");
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
+const AddTopic = () => {
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-      <input
-        onChange={(e) => setTitle(e.target.value)}
-        value={title}
-        className="border border-slate-500 px-8 py-2"
-        type="text"
-        placeholder="Topic Title"
-      />
-
-      <input
-        onChange={(e) => setDescription(e.target.value)}
-        value={description}
-        className="border border-slate-500 px-8 py-2"
-        type="text"
-        placeholder="Topic Description"
-      />
-
-      <button
-        type="submit"
-        className="bg-orange-600 font-bold text-white py-3 px-6 w-fit"
-      >
-        Add Topic
-      </button>
-    </form>
-  );
+    <div>
+      <AddTopic />
+    </div>
+  )
 }
+
+export default AddTopic

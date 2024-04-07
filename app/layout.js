@@ -55,7 +55,7 @@ export const metadata = {
     description: ' Gulfam saifi || gulfaam saifi , gscoder, Discover  unequaled  design mastery at Gulfam saifi || gulfaam saifi – where invention meets complication. Elevate your space with bespoke innards that  review luxury and reflect your unique style. aplusstudio noida',
   
     images: [{
-      url: '/boy.png',
+      url: '/gulfam.jpeg',
       width: 400,
       height: 300,
     }]
