@@ -31,7 +31,7 @@ export default async function TopicsList() {
         >
           <div className="truncate ...">
             <h2 className=" font-bold text-2xl">{t.title}</h2>
-            <div>{t.description}</div>
+            <p>{t.description}</p>
           </div>
 
           <div className="flex gap-2">
