@@ -1,5 +1,5 @@
 import React from 'react'
-import AddTopic from '@/components/Addtopic'
+import AddTopics from '@/components/Addtopic'
 
 
 export const metadata = {
@@ -64,12 +64,12 @@ export const metadata = {
 }
 
 
-const AddTopic = () => {
+const AddTopicData = () => {
   return (
     <div>
-      <AddTopic />
+      <AddTopics />
     </div>
   )
 }
 
-export default AddTopic
+export default AddTopicData

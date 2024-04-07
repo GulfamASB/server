@@ -9,17 +9,27 @@
 
 <url>
   <loc>https://gsserver.netlify.app/</loc>
-  <lastmod>2024-04-07T12:47:26+00:00</lastmod>
+  <lastmod>2024-04-07T13:07:39+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://gsserver.netlify.app/addtopic</loc>
-  <lastmod>2024-04-07T12:47:26+00:00</lastmod>
+  <lastmod>2024-04-07T13:07:39+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://gsserver.netlify.app/editTopic/660f9eeb5d5cdd8b5014bdc4</loc>
-  <lastmod>2024-04-07T12:47:26+00:00</lastmod>
+  <lastmod>2024-04-07T13:07:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gsserver.netlify.app/editTopic/66129a74bc1cb20b28561c7e</loc>
+  <lastmod>2024-04-07T13:07:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gsserver.netlify.app/editTopic/66129a88bc1cb20b28561c80</loc>
+  <lastmod>2024-04-07T13:07:39+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
