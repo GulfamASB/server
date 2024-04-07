@@ -1,4 +1,18 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {}
+// next.config.js
 
-module.exports = nextConfig
+module.exports = {
+    async headers() {
+      return [
+        {
+          source: '/',
+          headers: [
+            {
+              key: 'Referrer-Policy',
+              value: 'strict-origin-when-cross-origin',
+            },
+          ],
+        },
+      ]
+    },
+  }
+  
