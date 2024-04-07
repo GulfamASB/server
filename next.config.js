@@ -4,7 +4,8 @@ module.exports = {
     async headers() {
       return [
         {
-          source: '/',
+          // Set Referrer-Policy header to strict-origin-when-cross-origin
+          source: 'https://gsserver.netlify.app',
           headers: [
             {
               key: 'Referrer-Policy',
@@ -12,7 +13,7 @@ module.exports = {
             },
           ],
         },
-      ]
+      ];
     },
-  }
+  };
   
